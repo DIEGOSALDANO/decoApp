@@ -7,13 +7,17 @@ module.exports = function() {
         res.render('index')
     });
     
-    router.get('/nosotros', (req, res) => {
-        res.render('nosotros')
+    router.get('/nosotras', (req, res) => {
+        res.render('nosotras')
     });
     
-  /*   router.get('/comprar', (req, res) => {
-        res.render('compre aquí')
-    }); */
+    router.get('/comprar', (req, res) => {
+        res.render('comprar')
+    });
+
+    router.get('/catalogo', (req, res) => {
+        res.render('catalogo')
+    });
 
     return router;
 }
