@@ -1,3 +1,10 @@
 extends ../layout/index
 block contenido
-    h1 nosotros
+    h1=pagina
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src="img/mosotras.jpg", alt="Imagen", class="img-fluid")
+            .col-md.7
+                h1 #{pagina}
+                blockquote

@@ -2,6 +2,15 @@ const express = require('express');
 const path = require('path');
 const routes = require('./routes')
 
+const config = require('./config');
+
+// validar si estamos
+const config = configs[app.get('env')];
+
+app.locals.titulo = config.nombredesitio;
+
+
+
 //Instanciar express
 const app = express();
 
@@ -13,6 +22,17 @@ app.set('views', path.join(__dirname, './views'));
 
 //Leer recursos estaticos
 app.use(express.static('public'));
+
+//muestra el año actual
+app.use((req, res, next)=>{
+    const fecha = new Date();
+    res.locals.fechaActual = fecha.getFullYear();
+    res.locals.saludo = 'Hola world'
+    console.log(res.locals)
+    return next();
+})
+
+
 
 app.use('/', routes() )
 
