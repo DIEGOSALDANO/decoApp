@@ -8,7 +8,9 @@ module.exports = function() {
     });
     
     router.get('/nosotras', (req, res) => {
-        res.render('nosotras')
+        res.render('nosotras', {
+            pagina: 'Sobre nosotras'
+        });
     });
     
     router.get('/comprar', (req, res) => {

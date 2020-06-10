@@ -4,11 +4,22 @@ const routes = require('./routes')
 
 const config = require('./config');
 
+const db = require('./config/database');
+
+ // npm i -S sequelize mysql2 instala sequelize cli
+ db.authenticate()
+ .then(() => {
+   console.log('Conexión a la Database');
+ })
+ .catch(err => {
+   console.error('Hubo un error al conectar la Database', err);
+ });
+
+
 // validar si estamos
-const config = configs[app.get('env')];
-
-app.locals.titulo = config.nombredesitio;
-
+/* const config = configs[app.get('env')];
+ */
+/* app.locals.titulo = config.nombredesitio; */
 
 
 //Instanciar express

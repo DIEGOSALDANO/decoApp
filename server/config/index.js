@@ -1,5 +1,5 @@
 module.exports = {
-    develoment: {
+    development: {
         nombresitio: 'Sitio en desarrollo'
     },
     producción: {
