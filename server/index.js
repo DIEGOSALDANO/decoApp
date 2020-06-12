@@ -4,17 +4,16 @@ const routes = require('./routes')
 
 const config = require('./config');
 
-const db = require('./config/database');
 
  // npm i -S sequelize mysql2 instala sequelize cli
- db.authenticate()
+ /* db.authenticate()
  .then(() => {
    console.log('Conexión a la Database');
  })
  .catch(err => {
    console.error('Hubo un error al conectar la Database', err);
  });
-
+ */
 
 // validar si estamos
 /* const config = configs[app.get('env')];
@@ -38,12 +37,10 @@ app.use(express.static('public'));
 app.use((req, res, next)=>{
     const fecha = new Date();
     res.locals.fechaActual = fecha.getFullYear();
-    res.locals.saludo = 'Hola world'
+    res.locals.pepe = '------------->'
     console.log(res.locals)
     return next();
 })
-
-
 
 app.use('/', routes() )
 

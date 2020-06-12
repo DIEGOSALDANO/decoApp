@@ -18,7 +18,9 @@ module.exports = function() {
     });
 
     router.get('/catalogo', (req, res) => {
-        res.render('catalogo')
+        res.render('catalogo', {
+            pagina: 'Catalogo de productos'
+        })
     });
 
     return router;
