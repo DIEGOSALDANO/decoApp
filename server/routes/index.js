@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+const Producto = require('../models/Productos')
 
 module.exports = function() {
     router.get('/', (req, res) => {
@@ -18,9 +19,16 @@ module.exports = function() {
     });
 
     router.get('/catalogo', (req, res) => {
+        Producto.findAll()
+            .then(producto => res.render('catalogo', {
+                pagina: 'Catalogo de productos',
+                producto
+            }))
+            .catch(error => console.log(error))
+            /* 
         res.render('catalogo', {
             pagina: 'Catalogo de productos'
-        })
+        }) */
     });
 
     return router;
