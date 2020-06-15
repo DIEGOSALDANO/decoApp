@@ -20,9 +20,9 @@ module.exports = function() {
 
     router.get('/catalogo', (req, res) => {
         Producto.findAll()
-            .then(producto => res.render('catalogo', {
+            .then(productos => res.render('catalogo', {
                 pagina: 'Catalogo de productos',
-                producto
+                productos
             }))
             .catch(error => console.log(error))
             /* 
