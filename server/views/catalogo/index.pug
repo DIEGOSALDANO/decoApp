@@ -4,16 +4,21 @@ block contenido
     main.container.mt-5
         h1.text-center #{pagina}
 
-    .container
+    .container.d-flex.justify-content-around
         .row
-            each i in productos
-                .col-12.col-sm-6.col-md-4.col-lg-3
+            each producto in productos
+                .col-12.col-sm-6.col-md-4.col-lg-3.ma-2
                     .card(style='width: 18rem;')
-                        img.card-img-top(src='...' alt='...')
+                        img.card-img-top(src=`img/productos/${producto.imagen}.jpg`, class="img-fluid" alt='Manteles de Ecocuero')
                         .card-body
-                            h5.card-title Card title
-                            p.card-text
-                            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                            a.btn.btn-primary(href='#') Go somewhere
+                            h4.card-title=producto.titulo
+                            h6.card-subtitle.mb-2.text-muted=producto.diseno
+                            h6=producto.descripcion
+
+                            ul.list-group.list-group-flush
+                                li.list-group-item=producto.color
+                                li.list-group-item=producto.medidas
+                                li.list-group-item Vestibulum at eros
+                           
 
                     

@@ -25,10 +25,11 @@ module.exports = function() {
                 productos
             }))
             .catch(error => console.log(error))
-            /* 
-        res.render('catalogo', {
-            pagina: 'Catalogo de productos'
-        }) */
+    });
+
+    router.get('/catalogo/:id', (req, res) => {
+        Producto.findAll()
+            res.send(req.params.id)
     });
 
     return router;
