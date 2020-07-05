@@ -1,3 +1,4 @@
+
 :root {
     font-family: 'Staatliches', cursive;
     font-family: 'Covered By Your Grace', cursive;
@@ -8,7 +9,7 @@ body {
     background-color: #fafafa;
 }
 h1, h2, h3 {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Montserrat', cursive;
     color: #15B9D5;
 }
 h1 {
@@ -19,6 +20,33 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+}
+
+.container-fluid {
+    width: 97% !important;
+}
+
+.text-description {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+}
+.primary {
+    color: violet;
+}
+.secondary {
+    color: green;
+
+}
+.btn-outline-primary {
+    color: violet;
+    border-color: violet;
+}
+
+.btn-outline-primary:hover {
+    background-color: violet;
+    border-color: violet;
+    color: white;
 }
 
 .btn-success {

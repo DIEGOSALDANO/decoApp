@@ -27,10 +27,15 @@ module.exports = function() {
             .catch(error => console.log(error))
     });
 
-    router.get('/catalogo/:id', (req, res) => {
-        Producto.findAll()
-            res.send(req.params.id)
-    });
+    /* router.get('/catalogo/:id', (req, res) => {
+        producto.findAll((req.params.id)
+           // res.send(req.params.id)
 
+            .then( producto => res.render('producto', {
+                producto
+            }))
+            .catch(error => console.log(error))
+    });
+ */
     return router;
 }
