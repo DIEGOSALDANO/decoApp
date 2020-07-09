@@ -32,23 +32,32 @@ h3 {
     text-align: justify;
 }
 .primary {
-    color: violet;
+    color: #562381;
 }
 .secondary {
-    color: green;
-
+    color: #55ab26;
 }
 .btn-outline-primary {
-    color: violet;
-    border-color: violet;
+    color: #562381;
+    border-color: #562381;
 }
 
 .btn-outline-primary:hover {
-    background-color: violet;
-    border-color: violet;
+    background-color: #562381;
+    border-color: #562381;
     color: white;
 }
 
+.btn-outline-secondary {
+    color: #55ab26;
+    border-color: #55ab26;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #55ab26;
+    border-color: #55ab26;
+    color: white;
+}
 .btn-success {
     background-color: #DC135F;
     border-color: #DC135F;
@@ -60,6 +69,13 @@ h3 {
     background-color: rgb(184, 5, 73);
     border-color: rgb(192, 7, 78);
 }
+
+/** Section full home **/
+.section {
+    text-align:center;
+    font-size: 3em;
+  }
+
 .slider {
     background: url(../img//superior.jpg);
     min-height: 600px;

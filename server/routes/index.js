@@ -27,15 +27,14 @@ module.exports = function() {
             .catch(error => console.log(error))
     });
 
-    /* router.get('/catalogo/:id', (req, res) => {
-        producto.findAll((req.params.id)
-           // res.send(req.params.id)
-
-            .then( producto => res.render('producto', {
-                producto
+    router.get('/catalogo/:id', (req, res) => {
+        Producto.findByPk(req.params.id)
+            .then(productos => res.render('producto', {
+                productos
             }))
             .catch(error => console.log(error))
     });
- */
+    
+ 
     return router;
 }
